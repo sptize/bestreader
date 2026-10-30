@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#191919">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<title>Lector</title></head><body>
+<main id="home" class="screen">
+  <div class="hero">
+    <div class="logo" aria-hidden="true"></div>
+    <h1>Lector</h1>
+    <p class="sub">Abre y lee tus documentos, sin conexión.</p>
+    <button id="pick" class="btn primary">Seleccionar documento</button>
+    <p class="formats">PDF · DOCX · XLSX · PPTX · TXT · HTML</p>
+    <p class="note">🔒 Todo se procesa en tu dispositivo. Nada se sube a Internet.</p>
+  </div>
+  <input id="file" type="file" hidden accept=".pdf,.docx,.xlsx,.xls,.pptx,.txt,.html,.htm">
+</main>
+<section id="reader" class="screen" hidden>
+  <header class="bar">
+    <button id="close" class="icon" aria-label="Cerrar documento">‹ Cerrar</button>
+    <div class="title"><strong id="fname"></strong><span id="ftype"></span></div>
+  </header>
+  <div id="tools" class="tools" hidden></div>
+  <div id="view" class="view" tabindex="0"></div>
+  <div id="loading" class="loading" hidden>Cargando…</div>
+</section>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="js/app.js"></script>
+</body></html>
